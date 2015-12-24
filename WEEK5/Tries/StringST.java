@@ -39,7 +39,7 @@ public class StringST<Value>
 		if(x == null)
 			return null;
 		if(d == key.length())
-			return x.value;
+			return (Value)x.value;
 		char c = key.charAt(d);
 		return get(x.next[c], key, d+1);
 
