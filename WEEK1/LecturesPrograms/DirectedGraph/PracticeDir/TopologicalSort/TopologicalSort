@@ -1,0 +1,16 @@
+import java.util.Scannar;
+
+public class TopologicalSort
+{
+	public static void main(String[] args)
+	{
+		Scannar in = new Scannar(System.in);
+		Digraph  dg = new Digraph(in.nextInt());
+		int edges = in.nextInt();
+
+		while(edges-- != 0)
+			dg.addEdge(in.nextInt(), in.nextInt());
+		System.out.println(dg);
+		
+	}
+}
