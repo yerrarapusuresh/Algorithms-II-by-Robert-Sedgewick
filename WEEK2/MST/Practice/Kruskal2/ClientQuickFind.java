@@ -5,7 +5,7 @@ public class ClientQuickFind{
 	public static void main(String[] args) {
 		
 		Scanner in = new Scanner(System.in);
-		QuickFind qf = new QuickFind(in.nextInt());
+		WeightedQuickUnionPathCompression qf = new WeightedQuickUnionPathCompression(in.nextInt());
 		boolean flag = false;
 		while(in.hasNext()){
 			int p = in.nextInt();
@@ -18,7 +18,7 @@ public class ClientQuickFind{
 			if(!flag && qf.components() == 1)
 				System.out.println("It is connected and acyclic");
 			else 
-				System.out.println("It is not tree");
+				System.out.println("It is not tree  "+qf.components());
 
 
 		
